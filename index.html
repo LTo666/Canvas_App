@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/205586a80e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Let's Play With RGB</h1>
+      <div class="row">
+        <div class="column left">
+          <a class="disabled" id="undo"
+            ><i class="fa-solid fa-rotate-left fa-2xl"></i
+          ></a>
+          <a class="disabled" id="redo"
+            ><i class="fa-solid fa-rotate-right fa-2xl"></i
+          ></a>
+          <a class="disabled" id="clear"
+            ><i class="fa-solid fa-trash-can fa-2xl"></i
+          ></a>
+          <a class="neon-button switch" id="rdHead"
+            ><i class="fa-solid fa-circle fa-2xs"></i
+          ></a>
+          <a class="neon-button unswitch" id="sqHead"
+            ><i class="fa-solid fa-square fa-2xs"></i
+          ></a>
+        </div>
+        <div class="column middle">
+          
+          <div class="pen-color">
+            <p id="pen-color-text">Stroke</p>
+            <input type="color" id="color" value="#FFF338" />
+          </div>
+          <div class="fill-color">
+            <p id="fill-color-text">Fill</p>
+            <input type="color" id="fill-color" value="#FFF338" />
+          </div>
+          <div class="wide">
+            <p id="width-text"></p>
+            <input
+              type="range"
+              name=""
+              id="pen-range"
+              min="2"
+              max="51"
+              value="2"
+            />
+          </div>
+        </div>
+        <div class="column right">
+          <a class="neon-button" href="#" id="btn-download" download="image.png"
+            ><i class="fa-solid fa-download fa-2xl"></i
+          ></a>
+        </div>
+      </div>
+      <div class="tool-draw">
+        <div class="btns">
+          <a class="neon-button" id="pen"
+            ><i class="fa-solid fa-paintbrush fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="eraser"
+            ><i class="fa-solid fa-eraser fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="line"><i class="fa-solid fa-minus fa-2xl"></i></a>
+          <a class="neon-button" id="quad-curve"><i class="fa-solid fa-c fa-2xl"></i></a>
+          <a class="neon-button" id="bezier-curve"
+            ><i class="fa-solid fa-bezier-curve fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="circle"
+            ><i class="fa-solid fa-circle fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="triangle"
+            ><i class="fa-solid fa-caret-up fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="rectangle"
+            ><i class="fa-solid fa-square fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="polygon"
+            ><i class="fa-solid fa-draw-polygon fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="paint-bucket"
+            ><i class="fa-solid fa-fill-drip fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="text-button"
+            ><i class="fa-solid fa-t fa-2xl"></i></a>
+          <a class="neon-button" id="magnifier"
+            ><i class="fa-solid fa-magnifying-glass fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="enlarger"
+            ><i class="fa-solid fa-magnifying-glass-plus fa-2xl"></i
+          ></a>
+          <a class="neon-button" id="contract"
+            ><i class="fa-solid fa-magnifying-glass-minus fa-2xl"></i
+          ></a>
+        </div>
+        <div>
+          <canvas
+            class="canvas"
+            id="canvas-real"
+            width="1280px"
+            height="480px"
+          ></canvas>
+          <canvas
+            class="canvas"
+            id="canvas-draft"
+            width="1280px"
+            height="480px"
+          ></canvas>
+          <canvas id="canvas-zoom" width="100" height="100"></canvas>
+          <input type="text" name="" id="input-text" placeholder="Enter Text" value="">
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./def.js"></script>
+    <script src="./function/brush.js"></script>
+    <script src="./function/rectangle.js"></script>
+    <script src="./function/circle.js"></script>
+    <script src="./function/eraser.js"></script>
+    <script src="./function/triangle.js"></script>
+    <script src="./function/magnifier.js"></script>
+    <script src="./function/floodfill.js"></script>
+    <script src="./function/instruction.js"></script>
+    <script src="./function/bezier_curve.js"></script>
+    <script src="./function/quad_curve.js"></script>
+    <script src="./function/line.js"></script>
+    <script src="./function/text.js"></script>
+    <script src="./function/polygon.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

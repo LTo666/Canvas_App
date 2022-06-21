@@ -324,3 +324,7 @@ canvas {
   font-family: inherit;
   padding: 0.5rem;
 }
+
+.svg-shadow {
+  filter: drop-shadow(0 0 0.45em var(--clr-neon));
+}

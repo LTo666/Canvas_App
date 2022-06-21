@@ -5,7 +5,7 @@ function rmInstruc() {
 function addInstruc(instruction) {
   rmInstruc();
   $(".row").after(
-    "<div class='instruction' style='padding-top: 0.3rem; padding-bottom: 2rem;'></div>"
+    "<div class='instruction' style='width: 1436px; padding-top: 0.3rem; padding-bottom: 2rem; text-align: center;'></div>"
   );
   $(".instruction").html(instruction);
   $(".instruction").fadeOut(0);
@@ -47,7 +47,7 @@ $("#rectangle").click(function () {
 $("#polygon").click(function () {
   if (tool != "polygon") {
     addInstruc(
-      "Drag for the sides, and finish it with clicking on the starting point"
+      "Drag for the sides, and finish the polygon with clicking on the starting point"
     );
   }
 });

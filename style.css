@@ -176,7 +176,7 @@ h1 {
   border: var(--clr-neon) 0.125em solid;
   padding: 0.5em 0.5em;
   border-radius: 0.4em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3);
   box-shadow: inset 0 0 0.1em 0 var(--clr-neon), 0 0 0.1em 0 var(--clr-neon);
   position: relative;
   display: flex;
@@ -323,8 +323,4 @@ canvas {
   font-size: 12px;
   font-family: inherit;
   padding: 0.5rem;
-}
-
-.svg-shadow {
-  filter: drop-shadow(0 0 0.45em var(--clr-neon));
 }

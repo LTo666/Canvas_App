@@ -31,6 +31,8 @@ class PaintBucket extends PaintFunction {
     $("#canvas-zoom").attr("width", "100")
     $("#canvas-zoom").attr("height", "100")
     this.ctxZoom.fillStyle = "#202443";
+    this.ctxZoom.strokeStyle = $("#fill-color").val();
+    this.ctxZoom.lineWidth = "2"
     $("#canvas-zoom").css("border-radius", "5rem");
     this.ctxZoom.clearRect(0, 0, this.canvasZoom.width, this.canvasZoom.height);
     this.ctxZoom.fillRect(0, 0, this.canvasZoom.width, this.canvasZoom.height);

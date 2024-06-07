@@ -18,6 +18,15 @@ body {
   background-color: var(--clr-bg);
 }
 
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .pen-color > p,
 .fill-color > p,
 .wide > p {
@@ -236,6 +245,7 @@ h1 {
 }
 
 .tool-draw {
+  width: 1436px;
   display: flex;
 }
 

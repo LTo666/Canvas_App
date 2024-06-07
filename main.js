@@ -388,30 +388,26 @@ $("#text-button").click(() => {
   });
 });
 
-$(document).ready(() => {
-  head = "round";
-  $("#width-text").html(`Stroke Width: ${ctxReal.lineWidth - 1}`);
-
-  const choosePen = () => {
-    $("#input-text").css("display", "none");
-    currentFunction = new Brush(ctxReal, ctxDraft);
-    clearRect(ctxDraft);
-    if (tool === "eraser") {
-      currentFunction.ctxReal.lineWidth -= 3;
-      tool = "brush";
-    } else {
-      tool = "brush";
-    }
-    $("#width-text").html(
-      `Stroke Width: ${currentFunction.ctxReal.lineWidth - 1}`
-    );
-    activeButton(`pen`);
-    showDiv("wide");
-    hideDiv("fill-color");
-    showDiv("pen-color");
+$("#pen").click(() => {
+  $("#input-text").css("display", "none");
+  currentFunction = new Brush(ctxReal, ctxDraft);
+  clearRect(ctxDraft);
+  if (tool === "eraser") {
+    currentFunction.ctxReal.lineWidth -= 3;
+    tool = "brush";
+  } else {
+    tool = "brush";
   }
-  
-  choosePen();
+  $("#width-text").html(
+    `Stroke Width: ${currentFunction.ctxReal.lineWidth - 1}`
+  );
+  activeButton(`pen`);
+  showDiv("wide");
+  hideDiv("fill-color");
+  showDiv("pen-color");
+});
 
-  $("#pen").click(choosePen);
-})
+// Initialize
+head = "round";
+$("#width-text").html(`Stroke Width: ${ctxReal.lineWidth - 1}`);
+$("#pen").trigger("click");
